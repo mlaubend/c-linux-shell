@@ -1,0 +1,15 @@
+SUMMARY:
+This is a simple shell in c that executes linux commands.  Each user inputted command is parsed through an inlined parser, concatenated with "/usr/bin/",  A child process is then forked, exec() is called and the command executed.
+
+extra functionality includes: 
+redirects
+cmd > file - redirects the standard output of cmd to a file
+cmd 1> file - same as cmd > file
+cmd 2> file - redirects the standard error of cmd to a file
+cmd >> file - append stdout of cmd to a file
+cmd 2>> file - append stderr of cmd to a file
+cmd &> file - redirect stdout and stderr of cmd to a file
+cmd < file redirect the contents of the file to the stdin of cmd  
+
+extra functions include: a 'cd' function to navigate through files and directories, and a 'trimwhitespace' function to help the parser.
+
